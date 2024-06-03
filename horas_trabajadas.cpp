@@ -1,17 +1,21 @@
-// se requiere determinar el sueldo semanal de un trabajador con base en 
-//las horas que trabaja y el pago por hora que recibe 
 #include<iostream>
 using namespace std;
+
+float salario(float horas, float valor){
+	
+	float x;
+	x = horas*valor;
+	return x;
+}
+
 int main(){
 	
-	float pago,sueldo,horas;
-	cout<<"Ingrese las horas trabajadas: ";
-	cin>>horas;
-	cout<<"Ingrese el pago por hora: ";
-	cin>> pago;
-	sueldo = horas*pago;
-	cout<<"El sueldo semanal es: $"<<sueldo;
+	float h, valor;
+	cout<<"Ingrese las horas trabajadas: "<<endl;
+	cin>>h;
+	cout<<"Ingrese el valor por horas de trabajo, en dolares: "<<endl;
+	cin>>valor;
+	cout<<"El salario es: "<<salario(h,valor);
 	
 	return 0;
 }
-
